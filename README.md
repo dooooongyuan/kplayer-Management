@@ -4,7 +4,7 @@
 springboot + vue + element-ui
 > ### 参考文档
 https://docs.kplayer.net/v0.5.8/api/plugin.html
-## 如何部署
+## 本地如何部署
 > ### 1.配置服务器文件
    + 进入你服务器的kplayer文件夹下
    + 编辑config.json文件
@@ -47,5 +47,120 @@ npm install
 npm run dev 
 ```
 + 浏览器进入http://localhost:9528/
+## 服务器如何部署
+> ### 准备工作
++ 服务器安装宝塔面板
++ 安装Node.js版本管理器 并下载v16.13.2版本
+![image](https://github.com/dooooongyuan/kplayer-Management/assets/128032721/62c32d1b-f2e9-4671-acfa-406c79195e30)
+
++ 安装Tomcat 8.5.78
+![image](https://github.com/dooooongyuan/kplayer-Management/assets/128032721/53537699-1ec6-43d3-8f81-a4ad8ea5edc7)
+
++ 为避免服务占用8080导致冲突，我们可以换个端口
+   + 开放 9528端口
+   + 开放	8677端口
++ 上传文件 将jar文件上传至服务器/home下
+![image](https://github.com/dooooongyuan/kplayer-Management/assets/128032721/c1b71596-1621-4cef-813d-1e4e67e9d041)
+
++ 上传文件 将项目中的application.properties文件上传至/home下
+![image](https://github.com/dooooongyuan/kplayer-Management/assets/128032721/7c2c8b55-c5ae-4c47-839d-8105efa2d4a4)
+
++ application.properties配置如下
+![image](https://github.com/dooooongyuan/kplayer-Management/assets/128032721/eca3df12-12f5-47b4-8f56-ea0c7e88bfbb)
+
+```java
+myapp.server.url=http://你的服务器ip:4156
+spring.mvc.hiddenmethod.filter.enabled=true
+server.port=8677
+```
++ 上传文件 将项目中的vue-admin文件上传至服务器/www/wwwroot/kplayeradmin下，或者你随意放置，自己记住位置就行
+![image](https://github.com/dooooongyuan/kplayer-Management/assets/128032721/33b5af09-88f8-47f2-8cbe-5e7f3bb5a209)
+
+> ### 文件配置
++ 进入你服务器vue-admin文件下，编辑vue.config.js文件
+![image](https://github.com/dooooongyuan/kplayer-Management/assets/128032721/67e66fd7-7e5f-4f9e-aa18-ee81afa978fd)
+
++ 修改以下内容
+![image](https://github.com/dooooongyuan/kplayer-Management/assets/128032721/8a982959-73b2-45d0-b2a0-b798d248c2cf)
+
+```java
+ proxy: {
+          '/dev-api': {
+            target: 'http://localhost:8677',
+            changeOrigin: true,
+            pathRewrite: {
+              '^/dev-api': ''
+            }
+          }
+        },
+```
++ 进入你服务器vue-admin文件下,编辑项目src下的main.js文件
+![image](https://github.com/dooooongyuan/kplayer-Management/assets/128032721/cd948174-2c3b-4001-a662-8926737da0e3)
+
++ 修改以下内容
+![image](https://github.com/dooooongyuan/kplayer-Management/assets/128032721/0cab68af-442e-47f6-b624-93a577eed62b)
+
+```java
+Vue.prototype.$apiDev = 'http://服务器ip地址:8677'
+```
++ 打开终端，进入你服务器vue-admin文件下
++ 执行以下命令,
+![image](https://github.com/dooooongyuan/kplayer-Management/assets/128032721/965ff426-694c-4ea7-88e0-30e86f346437)
+
+```java
+npm install 
+```
+> ### 运行后端服务
++ 打开终端，进入jar包存在路径，也就是/home下
++ 执行以下命令进行测试后端服务
+![image](https://github.com/dooooongyuan/kplayer-Management/assets/128032721/6f0ffd03-34ba-4707-ad84-08e4d3cdcb07)
+
+```java
+java -jar yuan-0.0.1-SNAPSHOT.jar
+```
++ 执行完毕进行测试
++ 打开你浏览器，输入http://服务器ip:8677/resource/list-all
++ 看到出内容就代表后端启动成功
+![image](https://github.com/dooooongyuan/kplayer-Management/assets/128032721/d48acde5-1749-4a87-b089-afe465483879)
+
++ 成功之后可以运行到后台
++ 打开终端，进入jar包存在路径，也就是/home下
++  执行以下命令进行测试后端服务
+```java
+nohup java -jar yuan-0.0.1-SNAPSHOT.jar &
+```
++ 没成功请发送消息到issues
+> ### 运行前端服务
++ 打开宝塔左侧网站管理
++ 点击Node项目,选择添加Node项目
+![image](https://github.com/dooooongyuan/kplayer-Management/assets/128032721/1c3936f8-0e75-431c-a772-c392485bfe29)
+![image](https://github.com/dooooongyuan/kplayer-Management/assets/128032721/3f2dfc74-25e5-4d94-b896-94482e3699ef)
+
+   + 项目目录选择你上传的vue-admin存放的路径
+   + 项目名称随意
+   + 启动项自己配置 输入npm run dev
+   + 运行端口选择 9528
+   + 运行用户自己选择
+   + node版本选择 v16.13.2
+   + 备注随意
+   + 绑定域名，添加你的域名或者直接输入ip
+   + 点击提交
++ 点击右侧设置，点击左侧项目日志
+![image](https://github.com/dooooongyuan/kplayer-Management/assets/128032721/b579fe6b-087b-4add-bae2-705f5c1a1443)
+
++ 等待一会刷新一下
++ 看到如下消息代表执行成功，如果没有执行成功，请发消息到issues
+![image](https://github.com/dooooongyuan/kplayer-Management/assets/128032721/b6c2fa99-8b1d-4936-84cf-caafcf2183e2)
+
+```java
+App running at:
+  - Local:   http://localhost:9528/ 
+  - Network: http://10.0.4.6:9528/
+
+  Note that the development build is not optimized.
+  To create a production build, run yarn build.
+```
+
+
 
 
