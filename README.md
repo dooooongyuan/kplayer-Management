@@ -125,7 +125,7 @@ java -jar yuan-0.0.1-SNAPSHOT.jar
 
 + 成功之后可以运行到后台
 + 打开终端，进入jar包存在路径，也就是/home下
-+  执行以下命令进行测试后端服务
++  执行以下命令进行后端后台运行
 ```java
 nohup java -jar yuan-0.0.1-SNAPSHOT.jar &
 ```
