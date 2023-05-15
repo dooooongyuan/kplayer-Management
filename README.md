@@ -160,7 +160,7 @@ App running at:
   Note that the development build is not optimized.
   To create a production build, run yarn build.
 ```
-
++ 最后打开http://ip地址/#/dashboard 即可进入管理页面
 
 
 
