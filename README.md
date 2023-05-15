@@ -26,6 +26,7 @@ https://docs.kplayer.net/v0.5.8/api/plugin.html
           }
     },
 ```
+   + 服务器防火墙记得开放4156端口
 > ### 2.后端配置
 
 + 下载压缩文件  kplayerdemo.zip 解压至本地
