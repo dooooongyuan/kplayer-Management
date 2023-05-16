@@ -1,5 +1,7 @@
 # kplayer-Management
 ## kplayer管理平台
+## 觉得下载慢可以去gitee
+https://gitee.com/dong-jingyuan/kplayer-management
 > ### 功能展示
   + 首页
   ![image](https://github.com/dooooongyuan/kplayer-Management/assets/128032721/bac23270-ea88-492f-9829-2c264978bf27)
