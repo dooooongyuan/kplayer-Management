@@ -1,5 +1,14 @@
 # kplayer-Management
 ## kplayer管理平台
+> ### 功能展示
+  + 首页
+  ![image](https://github.com/dooooongyuan/kplayer-Management/assets/128032721/bac23270-ea88-492f-9829-2c264978bf27)
+  + 资源配置页
+  ![image](https://github.com/dooooongyuan/kplayer-Management/assets/128032721/816310fb-9849-4b4f-a51d-3a92dfa0cfaa)
+  + 输出配置页（推流地址管理）
+  ![image](https://github.com/dooooongyuan/kplayer-Management/assets/128032721/deccaea8-febe-40c2-84ec-37fe9fb8a3be)
+  + 插件配置页
+  ![image](https://github.com/dooooongyuan/kplayer-Management/assets/128032721/0a5166c4-d543-40b7-992f-b3d7878e4b8d)
 > ### 使用技术
 springboot + vue + element-ui
 > ### 参考文档
