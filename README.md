@@ -39,15 +39,15 @@ https://docs.kplayer.net/v0.5.8/api/plugin.html
 > ### 2.后端配置
 
 + 下载压缩文件  kplayerdemo.zip 解压至本地
-+ 打开代码运行工具，idea或其他   |没有的或者不会的等待jar包
++ 打开代码运行工具，idea或其他   
 + 进入项目，修改maven为你的仓库
 + 修改application.properties 文件
-   + myapp.server.url=http://ip:4156    ip为你的服务器地址，端口同上配置config.json文件里rpc的4156
+   + myapp.server.url=http://你的服务器ip:4156    
 + 运行KplayerApplication
 + 后端启动端口默认8080
 
 > ### 3.前端配置
-+ 确认本地存在node环境 推荐16版本
++ 确认本地存在node环境 推荐16.13.2版本
 + 下载vue-admin压缩文件 解压至本地
 + 打开代码运行工具，hbulider,或vscode
 + 进入项目
