@@ -158,7 +158,13 @@ nohup java -jar yuan-0.0.1-SNAPSHOT.jar &
 ![image](https://github.com/dooooongyuan/kplayer-Management/assets/128032721/b579fe6b-087b-4add-bae2-705f5c1a1443)
 
 + 等待一会刷新一下
-+ 看到如下消息代表执行成功，如果没有执行成功，请发消息到issues
++ 看到如下消息代表执行成功，如果没有执行成功显示如下
+![30c515c246c37cb25dc7538223a2bad](https://github.com/dooooongyuan/kplayer-Management/assets/128032721/eb4cbba5-ecae-4994-a6e3-318d5a91cfca)
++ 还是进入vue-admin存放的路径，那么你可以尝试以下命令
+ ```
+ npm install core-js@3 --save
+ ```
++ 再次重启项目将显示正常运行
 ![image](https://github.com/dooooongyuan/kplayer-Management/assets/128032721/b6c2fa99-8b1d-4936-84cf-caafcf2183e2)
 
 ```java
