@@ -63,10 +63,12 @@ npm run dev
 + 服务器安装宝塔面板
 + 安装Node.js版本管理器 并下载v16.13.2版本
 ![image](https://github.com/dooooongyuan/kplayer-Management/assets/128032721/62c32d1b-f2e9-4671-acfa-406c79195e30)
-
++ 点击Node.js版本管理器右侧设置，勾选下载的版本
+![image](https://github.com/dooooongyuan/kplayer-Management/assets/128032721/44e2fd1f-6720-494e-857f-d5f0f1cf0e87)
 + 安装Tomcat 8.5.78
 ![image](https://github.com/dooooongyuan/kplayer-Management/assets/128032721/53537699-1ec6-43d3-8f81-a4ad8ea5edc7)
-
++ 点击Tomcat 8.5.78右侧设置选择对应版本
+![image](https://github.com/dooooongyuan/kplayer-Management/assets/128032721/fd07a663-ac10-47dd-be1e-e3914004b28a) 
 + 为避免服务占用8080导致冲突，我们可以换个端口
    + 开放 9528端口
    + 开放	8677端口
