@@ -93,7 +93,7 @@ npm run dev
 + 为避免服务占用8080导致冲突，我们可以换个端口
    + 开放 9528端口
    + 开放	8677端口
-+ 上传文件 将jar文件上传至服务器/home下
++ 上传文件 将yuan-0.0.1-SNAPSHOT.jar文件上传至服务器/home下
 ![image](https://github.com/dooooongyuan/kplayer-Management/assets/128032721/c1b71596-1621-4cef-813d-1e4e67e9d041)
 
 + 上传文件 将项目中的application.properties文件上传至/home下
@@ -107,11 +107,11 @@ myapp.server.url=http://你的服务器ip:4156
 spring.mvc.hiddenmethod.filter.enabled=true
 server.port=8677
 ```
-+ 上传文件 将项目中的vue-admin文件上传至服务器/www/wwwroot/kplayeradmin下，或者你随意放置，自己记住位置就行
++ 上传文件 将项目中的vue-admin-template-master文件上传至服务器/www/wwwroot/kplayeradmin下，或者你随意放置，自己记住位置就行
 ![image](https://github.com/dooooongyuan/kplayer-Management/assets/128032721/33b5af09-88f8-47f2-8cbe-5e7f3bb5a209)
 
 > ### 文件配置
-+ 进入你服务器vue-admin文件下，编辑vue.config.js文件
++ 进入你服务器vue-admin-template-master文件下，编辑vue.config.js文件
 ![image](https://github.com/dooooongyuan/kplayer-Management/assets/128032721/67e66fd7-7e5f-4f9e-aa18-ee81afa978fd)
 
 + 修改以下内容
@@ -128,7 +128,7 @@ server.port=8677
           }
         },
 ```
-+ 进入你服务器vue-admin文件下,编辑项目src下的main.js文件
++ 进入你服务器vue-admin-template-master文件下,编辑项目src下的main.js文件
 ![image](https://github.com/dooooongyuan/kplayer-Management/assets/128032721/cd948174-2c3b-4001-a662-8926737da0e3)
 
 + 修改以下内容
@@ -137,7 +137,7 @@ server.port=8677
 ```java
 Vue.prototype.$apiDev = 'http://服务器ip地址:8677'
 ```
-+ 打开终端，进入你服务器vue-admin文件下
++ 打开终端，进入你服务器vue-admin-template-master文件下
 + 执行以下命令,
 ![image](https://github.com/dooooongyuan/kplayer-Management/assets/128032721/965ff426-694c-4ea7-88e0-30e86f346437)
 
@@ -145,7 +145,7 @@ Vue.prototype.$apiDev = 'http://服务器ip地址:8677'
 npm install 
 ```
 > ### 运行后端服务
-+ 打开终端，进入jar包存在路径，也就是/home下
++ 打开终端，进入yuan-0.0.1-SNAPSHOT.jar包存在路径，也就是/home下
 + 执行以下命令进行测试后端服务
 ![image](https://github.com/dooooongyuan/kplayer-Management/assets/128032721/6f0ffd03-34ba-4707-ad84-08e4d3cdcb07)
 
@@ -158,7 +158,7 @@ java -jar yuan-0.0.1-SNAPSHOT.jar
 ![image](https://github.com/dooooongyuan/kplayer-Management/assets/128032721/d48acde5-1749-4a87-b089-afe465483879)
 
 + 成功之后可以运行到后台
-+ 打开终端，进入jar包存在路径，也就是/home下
++ 打开终端，进入yuan-0.0.1-SNAPSHOT.jar包存在路径，也就是/home下
 +  执行以下命令进行后端后台运行
 ```java
 nohup java -jar yuan-0.0.1-SNAPSHOT.jar &
@@ -185,7 +185,7 @@ nohup java -jar yuan-0.0.1-SNAPSHOT.jar &
 + 等待一会刷新一下
 + 如果没有执行成功显示如下
 ![30c515c246c37cb25dc7538223a2bad](https://github.com/dooooongyuan/kplayer-Management/assets/128032721/eb4cbba5-ecae-4994-a6e3-318d5a91cfca)
-+ 还是进入vue-admin存放的路径，那么你可以尝试以下命令
++ 还是进入vue-admin-template-master文件夹下，那么你可以尝试以下命令
  ```
  npm install core-js@3 --save
  ```
