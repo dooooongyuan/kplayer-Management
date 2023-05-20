@@ -59,6 +59,27 @@ npm run dev
 ```
 + 浏览器进入http://localhost:9528/
 ## 服务器如何部署
+> ### 1.配置服务器文件
+   + 进入你服务器的kplayer文件夹下
+   + 编辑config.json文件
+   + 修改里面内容,将 rpc功能打开,或者你直接复制我那部分
+```java
+    "play": {
+    "start_point": 1,
+    "play_model": "loop",
+    "encode_model": "rtmp",
+    "cache_on": false,
+    "cache_uncheck": false,
+    "skip_invalid_resource": true,
+    "fill_strategy": "tile",
+          "rpc": {
+          "on": true,
+          "http_port": 4156,
+          "grpc_port": 4157,
+          "address": "0.0.0.0"
+          }
+    },
+```
 > ### 准备工作
 + 服务器安装宝塔面板
 + 安装Node.js版本管理器 并下载v16.13.2版本
